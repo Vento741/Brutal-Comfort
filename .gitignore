@@ -27,9 +27,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Media and static files
-media/
-static/
 
 # Secret key
 *.secret
