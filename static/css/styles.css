@@ -2,8 +2,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f0f0f0;
+    color: #383737;
+    background-color: #dadada;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
 
 /* Header styles */
 .navbar {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -56,8 +56,8 @@ body {
     bottom: 0;
     background: radial-gradient(
         ellipse at center,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,0.5) 100%
+        rgba(245, 245, 245, 0) 0%,
+        rgb(241, 241, 241) 250%
     );
 }
 
@@ -88,16 +88,16 @@ body {
 
 /* Modern card styles */
 .card {
-    background-color: #272727;
+    background-color: #f3f3f3;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(32, 32, 32, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 30px;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgb(245, 245, 245);
 }
 
 .card-img-top {
@@ -126,8 +126,8 @@ body {
 
 /* Footer styles */
 footer {
-    background-color: #0a0a0a;
-    color: #0f0f0f;
+    background-color: #e0e0e0;
+    color: #ffffff;
     padding: 40px 0;
     margin-top: 60px;
 }
