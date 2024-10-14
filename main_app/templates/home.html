@@ -18,6 +18,11 @@
     <div class="row">
         {% for project in featured_projects %}
         <div class="col-md-3 mb-4">
+            {% if project.image %}
+            <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}" data-src="{{ project.image.url }}">
+            {% else %}
+                <img src="{% static 'images/placeholder.jpg' %}" class="card-img-top" alt="Placeholder">
+            {% endif %}
             <div class="card">
                 <img src="{{ project.image.url }}?{% now "U" %}" class="card-img-top" alt="{{ project.title }}">
                 <div class="card-body">
@@ -34,4 +39,15 @@
         {% endfor %}
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach(img => {
+        img.src = img.dataset.src + '?t=' + new Date().getTime();
+    });
+});
+</script>
 {% endblock %}

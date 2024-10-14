@@ -70,9 +70,9 @@ def consultation(request):
     if request.method == 'POST':
         form = ConsultationForm(request.POST)
         if form.is_valid():
-            form.save()  # Сохраняем данные в базу данных
+            form.save()
             messages.success(request, 'Ваша заявка на консультацию успешно отправлена!')
             return redirect('home')
     else:
         form = ConsultationForm()
-    return render(request, 'consultation.html', {'form': form, 'consultation_form': form})
+    return render(request, 'consultation.html', {'form': form})

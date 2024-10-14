@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Заказать консультацию - Brutal Comfort{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Заказать консультацию</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+    </form>
+</div>
+{% endblock %}
