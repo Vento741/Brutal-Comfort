@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Проекты - Бутик авторской кухни и мебели{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Наши проекты</h1>
+
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description|truncatewords:30 }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>На данный момент проектов нет.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

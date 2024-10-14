@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Блог - Бутик авторской кухни и мебели{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Наш блог</h1>
+
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                {% if post.image %}
+                <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.content|truncatewords:50 }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Опубликовано: {{ post.created_at|date:"d.m.Y" }}</small>
+                    <a href="#" class="btn btn-sm btn-primary float-right">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>На данный момент записей в блоге нет.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}О нас - Бутик авторской кухни и мебели{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">О нашем бутике</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>История бренда</h2>
+        <p>Здесь будет описание истории бренда, его основания и развития.</p>
+    </div>
+    <div class="col-md-6">
+        <h2>Философия дизайна</h2>
+        <p>Описание философии дизайна, подхода к созданию мебели и интерьеров.</p>
+    </div>
+</div>
+
+<h2 class="mt-5 mb-4">Наша команда</h2>
+<div class="row">
+    <!-- Пример карточки члена команды -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="/static/images/placeholder.jpg" class="card-img-top" alt="Имя дизайнера">
+            <div class="card-body">
+                <h5 class="card-title">Имя Фамилия</h5>
+                <p class="card-text">Краткая биография и специализация дизайнера.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Добавьте больше карточек для других членов команды -->
+</div>
+
+<h2 class="mt-5 mb-4">Наш процесс работы</h2>
+<div class="row">
+    <div class="col-md-3 text-center">
+        <i class="fas fa-lightbulb fa-3x mb-3"></i>
+        <h4>Идея</h4>
+        <p>Обсуждение идей и пожеланий клиента</p>
+    </div>
+    <div class="col-md-3 text-center">
+        <i class="fas fa-pencil-alt fa-3x mb-3"></i>
+        <h4>Проектирование</h4>
+        <p>Создание эскизов и 3D-моделей</p>
+    </div>
+    <div class="col-md-3 text-center">
+        <i class="fas fa-hammer fa-3x mb-3"></i>
+        <h4>Производство</h4>
+        <p>Изготовление мебели на нашем производстве</p>
+    </div>
+    <div class="col-md-3 text-center">
+        <i class="fas fa-home fa-3x mb-3"></i>
+        <h4>Установка</h4>
+        <p>Доставка и монтаж готовой мебели</p>
+    </div>
+</div>
+{% endblock %}
